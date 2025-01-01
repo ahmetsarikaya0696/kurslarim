@@ -1,12 +1,47 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.App > button {
+  cursor: pointer;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 45px;
+}
+
 .App h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .courses {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.courses button {
+  cursor: pointer;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.courses button:disabled {
+  cursor: pointer;
+  border: none;
+  background-color: lightgray;
+  color: white;
+  border-radius: 100%;
+  padding: 10px;
 }
 
 .course-item {
@@ -17,56 +52,56 @@
 }
 
 .course-item button {
-    cursor: pointer;
-    border: none;
-    background-color: purple;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 45px;
+  cursor: pointer;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 45px;
 }
 
 .price {
-    color: darkred;
-    font-style: italic;
-    font-weight: bold;
+  color: darkred;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .refreshDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .refreshDiv button {
-    cursor: pointer;
-    border: none;
-    background-color: purple;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 45px;
+  cursor: pointer;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 45px;
 }
 
 .loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  
-  .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin-bottom: 10px;
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+}

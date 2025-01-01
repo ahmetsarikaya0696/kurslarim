@@ -10,7 +10,7 @@ function App() {
   const fetchCourses = async () => {
     try {
       setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       var response = await axios.get("http://localhost:3001/courses");
       setCourses(response.data);
       setLoading(false);
@@ -23,24 +23,19 @@ function App() {
     fetchCourses();
   }, []);
 
-  const handleDelete = (id) => {
-    setCourses(courses.filter((course) => course.id !== id));
-  };
-
   if (loading) return <Loading />;
 
   if (!courses || courses.length === 0)
     return (
       <div className="refreshDiv">
-        <h1>Kursların hepsini sildin!</h1>
-        <button onClick={() => fetchCourses()}>Yenile</button>
+        <h1>Kurs bulunamadı!</h1>
       </div>
     );
 
   return (
     <div className="App">
       <h1>Kurslarım</h1>
-      <Courses courses={courses} onDelete={handleDelete} />
+      <Courses courses={courses} />
     </div>
   );
 }
