@@ -7,8 +7,7 @@ Kurslarim is a React application built with Vite that displays a list of courses
 - Display a list of courses with title, price, and content.
 - Navigate through courses using previous and next buttons.
 - Assign a random course to display.
-- Loading spinner while fetching data.
-- Refresh button when all courses are deleted.
+- Loading spinner while fetching data
 
 ## Usefull Links
 - https://www.npmjs.com/package/json-server
